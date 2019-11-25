@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-    entry: './src/app.js',
+    entry: './src/playground/redux-expensify.js',
     mode: 'development',
     output: {
         path: path.join(__dirname, 'public'),
@@ -17,10 +17,18 @@ module.exports = {
                 presets: ['@babel/preset-env']
               }
             }
+          }, {
+            test: /\.s?css$/,
+              use: [
+              'style-loader',
+              'css-loader',
+              'sass-loader'
+              ]
           }]
     },  
     devtool: 'cheap-module-eval-source-map',
     devServer: {
-        contentbase: path.join(__dirname, 'public')
+        contentBase: path.join(__dirname, 'public'),
+        historyApiFallback: true
     }
 };
