@@ -14,7 +14,7 @@ export const ExpenseList = (props) => (
                 })  
             )
         }
-            <h1>Expesne List</h1>
+            <h1>Expense List</h1>
     </div>
 );
 
