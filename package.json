@@ -9,7 +9,9 @@
     "build:prod": "webpack -p --env production",
     "serve": "live-server public/",
     "dev-server": "webpack-dev-server",
-    "test": "jest --config=jest.config.json"
+    "test": "jest --config=jest.config.json",
+    "start": "node server/server.js",
+    "heroku-perbuild": "yarn run build:prod"
   },
   "dependencies": {
     "babel-plugin-transform-class-properties": "^6.24.1",
@@ -18,6 +20,7 @@
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
     "enzyme-to-json": "^3.4.3",
+    "express": "^4.17.1",
     "jest": "^24.9.0",
     "mini-css-extract-plugin": "^0.8.1",
     "moment": "^2.24.0",
