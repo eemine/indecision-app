@@ -8,3 +8,4 @@ test('should render ExpenseListItem correctly', () => {
     expect(wrapper).toMatchSnapshot();
 });
 
+  

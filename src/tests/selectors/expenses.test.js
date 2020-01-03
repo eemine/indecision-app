@@ -2,29 +2,9 @@ import selectExpenses from '../../selectors/expenses';
 import moment from 'moment';
 import expenses from '../fixtures/expenses';
 
-const expenses = [{
-    id: '1',
-    description: 'Gum',
-    note: '',
-    amount: 195,
-    createdAt: 0
-}, {
-    id: '2',
-    description: 'Rent',
-    note: '',
-    amount: 109500,
-    createdAt: moment(0).subtract(4, 'days').valueOf()
-}, {
-    id: '3',
-    description: 'Credit Card',
-    note: '',
-    amount: 4500,
-    createdAt: moment(0).add(4, 'days').valueOf()
-}]
-
 test('should filter by test value', () => {
     const filters = {
-        test: 'e',
+        text: 'e',
         sortBy: 'date',
         startDate: undefined,
         endDate: undefined
@@ -35,7 +15,7 @@ test('should filter by test value', () => {
 
 test('should filter by starDate', () => {
     const filters = {
-        test: '',
+        text: '',
         sortBy: 'date',
         startDate: moment(0),
         endDate: undefined
@@ -46,7 +26,7 @@ test('should filter by starDate', () => {
 
 test('should filter by endDate', () => {
     const filters = {
-        test: '',
+        text: '',
         sortBy: 'date',
         startDate: undefined,
         endDate: moment(0).add(2, 'days')
@@ -57,7 +37,7 @@ test('should filter by endDate', () => {
 
 test('should sort by date', () => {
     const filters = {
-        test: '',
+        text: '',
         sortBy: 'date',
         startDate: undefined,
         endDate: undefined
